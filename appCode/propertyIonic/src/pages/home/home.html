@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     Property finder
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-label>Search for houses</ion-label>
+	<ion-label>Search for places</ion-label>
+
+	<form (ngSubmit)="formSubmit(searchtext)">
+		<ion-item>
+		  <ion-input type="text" [(ngModel)]="searchtext" [ngModelOptions]="{standalone: true}" (keyup.enter)="handleLogin(searchtext)" #inputToFocus></ion-input>
+		</ion-item>
+		<button ion-button>Go</button>
+	</form>
+
+</ion-content>
